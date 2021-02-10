@@ -1,5 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@400;700&display=swap');
 
+:root{
+    --Dark-cyan: hsl(185, 75%, 39%);
+    --Very-dark-desaturated-blue: hsl(229, 23%, 23%);
+    --Dark-grayish-blue: hsl(227, 10%, 46%);
+    --Dark-gray: hsl(0, 0%, 59%)
+}
+
 *{
     padding: 0;
     margin: 0;
@@ -16,37 +23,53 @@ body{
     background-image: url("../images/bg-pattern-top.svg"), url("../images/bg-pattern-bottom.svg");
     background-repeat: no-repeat, no-repeat;
     background-position: -60% 190%, 150% -150%;
-    background-color: hsl(185, 75%, 39%) ;
-    font-family: 'Kumbh Sans', sans-serif;
-    font-size: 18px;
-
+    background-color: var(--Dark-cyan) ;
+    font-family: 'Kumbh Sans', sans-serif;  
+    
     display: flex;
-    align-items: center;
+    align-items: center;  
     justify-content: center;
 }
 
 section{
     background-color: white;
-    height: 60%;
-    border-radius: 15px;
+    height: 60vh;
+    width: 30vw;
+    border-radius: 1.5vh;
+
+    display: flex;
+    flex-direction: column;
+
 }
 
-section img{
-    border-radius: 15px 15px 0px 0px;
+.bg-top-card{
+
+    border-radius: 1.5vh 1.5vh 0px 0px;
+
 }
 
-
-.container-name{
+.profile{
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-items: flex-start;
     margin: 0 4vw 3vh 4vw;
+}
+
+.photo{
+    position: relative;
+    top: -55px;
+    border-radius: 50%;
+    border: 5px white solid;
 
 
 }
 
 .name{
+    display: flex;
+    flex-direction: row;
+
     width: 100%;
     justify-content: space-evenly;
     
@@ -57,20 +80,7 @@ section img{
     align-items: center;
 }
 
-
-section div img{
-    position: relative;
-    top: -55px;
-    border-radius: 50%;
-    border: 5px white solid;
-}
-
-section div div{
-    display: flex;
-    flex-direction: row;
-}
-
-.container{
+.data-profile{
     border-style: solid none none none;
     border-width: 1px;
     border-color: gray;
@@ -82,7 +92,7 @@ section div div{
     text-align: center;
 
     width: 100%;
-    height: 20%;
+    height: 100vh;
 
 }
 
